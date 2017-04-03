@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Clock from './Clock'
+import Clock from './Clock';
+import Weather from './Weather';
 import './App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Clock/>
+        <Weather />
       </div>
     );
   }

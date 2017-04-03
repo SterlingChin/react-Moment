@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactInterval from 'react-interval';
+import './clock.css'
 
 class Clock extends Component {
 
@@ -18,9 +19,11 @@ class Clock extends Component {
 
     render() {
         return (
-            <div id='clock'>
-                {this.updateClock()}
-                <ReactInterval timeout={1000} enabled={true} callback={() => this.setState({clock: this.updateClock()} )} />
+            <div className='clock'>
+                <div id='clock'>
+                    {this.updateClock()}
+                    <ReactInterval timeout={1000} enabled={true} callback={() => this.setState({clock: this.updateClock()} )} />
+                </div>
             </div>
         );
     }
