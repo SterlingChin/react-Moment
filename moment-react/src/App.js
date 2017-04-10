@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
 import Weather from './Weather';
+import Quote from './Quote';
+import Menu from './Menu'
 import './App.css';
 
 class App extends Component {
@@ -9,6 +11,8 @@ class App extends Component {
       <div className="App">
         <Clock/>
         <Weather />
+        <Quote />
+        <Menu />
       </div>
     );
   }

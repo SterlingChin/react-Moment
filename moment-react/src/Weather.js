@@ -39,15 +39,13 @@ class Weather extends Component {
             method: 'GET'
         }).then(response => response.json())
         .then(json => {
-            // console.log('forecast json', json)
+            console.log('forecast json', json)
             this.setState({
                 city: json.city.name,
                 forecast:json.list
             })
-            // console.log('forecast', this.state.forecast[0])
+            console.log('forecast', this.state.forecast[0])
         })
-        setInterval(this.currentWeather(),1000)//3600000
-        console.log('hit again!')
         
 
     }
@@ -74,6 +72,7 @@ class Weather extends Component {
                 </FormGroup>
                 <h1>{this.state.currentWeather.currentTemp}°</h1>
                 <p>{this.state.city}</p>
+                <div></div>
             </div>
         );
     }
